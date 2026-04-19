@@ -3,37 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moyhaz Network | Premium Digital Services</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <title>Moyhaz Network | Layanan Premium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav class="navbar">
         <div class="nav-container">
-            <div class="brand">MOYHAZ<span>NETWORK</span></div>
-            <a href="https://wa.me/628123456789" class="btn-contact">Hubungi Admin</a>
+            <div class="brand">
+                <div class="logo-box">M</div>
+                Moyhaz<span>Network</span>
+            </div>
+            <a href="https://wa.me/628123456789" class="btn-primary">Hubungi Admin</a>
         </div>
     </nav>
 
     <header class="hero">
-        <div class="badge">🚀 Layanan Digital Terpercaya</div>
-        <h1>Pusat Layanan Premium <br><span class="highlight">Otomatis & Cepat</span></h1>
-        <p>Pilih layanan script, panel, atau cloud yang Anda butuhkan. Transaksi aman, proses secepat kilat.</p>
-        
-        <div class="stats-container">
-            <div class="stat-item">✅ 100% Aman</div>
-            <div class="stat-item">⚡ Auto Proses</div>
-            <div class="stat-item">🎧 24/7 Support</div>
-        </div>
+        <span class="badge">✨ Solusi Digital Terbaik 2026</span>
+        <h1>Katalog Layanan <span class="text-blue">Premium</span></h1>
+        <p>Temukan script bot, panel game, dan layanan cloud server dengan kualitas terbaik dan harga terjangkau.</p>
     </header>
 
     <main class="container">
-        <div class="section-title">
-            <h2>🔥 Daftar Layanan Kami</h2>
+        
+        <div class="tabs-container">
+            <button class="tab-btn active" onclick="filterKategori('Semua', this)">Semua Layanan</button>
+            <button class="tab-btn" onclick="filterKategori('Script', this)">📦 Script & Bot</button>
+            <button class="tab-btn" onclick="filterKategori('Server', this)">☁️ Cloud & Server</button>
+            <button class="tab-btn" onclick="filterKategori('Desain', this)">🎨 UI/UX Desain</button>
         </div>
 
-        <div class="grid-layanan" id="katalog-produk"></div>
+        <div class="katalog-galeri" id="katalog-produk">
+            </div>
+
     </main>
 
     <footer>
