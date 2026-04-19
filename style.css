@@ -1,12 +1,12 @@
-/* ROOT - Warna Tema Terang (Light Mode) */
+/* WARNA TEMA TERANG (RUMAH OTP VIBES) */
 :root {
-    --bg-body: #F9FAFB;      /* Background abu-abu sangat muda */
-    --bg-card: #FFFFFF;      /* Background kartu putih bersih */
-    --text-dark: #111827;    /* Teks hitam pekat */
-    --text-muted: #6B7280;   /* Teks abu-abu */
-    --border: #E5E7EB;       /* Garis pembatas halus */
-    --primary: #2563EB;      /* Biru profesional (ala RumahOTP) */
-    --primary-hover: #1D4ED8;
+    --bg-body: #FFFFFF;      /* Putih bersih */
+    --bg-card: #FFFFFF;      
+    --text-dark: #1F2937;    /* Hitam keabuan tebal */
+    --text-muted: #6B7280;   /* Abu-abu teks deksripsi */
+    --border: #E5E7EB;       
+    --primary: #2563EB;      /* Biru terang (Tombol, Ikon) */
+    --primary-light: #DBEAFE;/* Biru sangat muda (Buat Lingkaran Nomor) */
 }
 
 * {
@@ -16,9 +16,12 @@
     font-family: 'Inter', sans-serif;
 }
 
+/* Pastikan body bisa discroll */
 body {
     background-color: var(--bg-body);
     color: var(--text-dark);
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 /* NAVBAR */
@@ -28,9 +31,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 }
-
 .nav-container {
     max-width: 1100px;
     margin: 0 auto;
@@ -39,53 +40,36 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-
 .brand {
     display: flex;
     align-items: center;
     gap: 10px;
     font-size: 20px;
     font-weight: 800;
-    color: var(--text-dark);
 }
-
 .brand span { font-weight: 500; color: var(--text-muted); }
-
 .logo-box {
-    background-color: var(--primary);
+    background: conic-gradient(from 180deg, #2563EB, #00D2FF, #2563EB);
     color: white;
-    width: 35px;
-    height: 35px;
+    width: 32px;
+    height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 8px;
-    font-size: 18px;
+    border-radius: 6px;
+    font-size: 16px;
 }
+.menu-icon { cursor: pointer; }
 
-.btn-primary {
-    background-color: var(--primary);
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 14px;
-    transition: 0.3s;
-}
-
-.btn-primary:hover { background-color: var(--primary-hover); }
-
-/* HERO SECTION */
+/* HERO */
 .hero {
     text-align: center;
-    padding: 60px 20px;
+    padding: 50px 20px 20px;
     max-width: 800px;
     margin: 0 auto;
 }
-
 .badge {
-    background-color: #DBEAFE;
+    background-color: var(--primary-light);
     color: var(--primary);
     padding: 6px 16px;
     border-radius: 50px;
@@ -94,173 +78,101 @@ body {
     display: inline-block;
     margin-bottom: 20px;
 }
-
-.hero h1 {
-    font-size: 42px;
-    font-weight: 800;
-    margin-bottom: 15px;
-    color: var(--text-dark);
-}
-
+.hero h1 { font-size: 38px; font-weight: 800; margin-bottom: 15px; }
 .text-blue { color: var(--primary); }
+.hero p { font-size: 15px; color: var(--text-muted); line-height: 1.6; }
 
-.hero p {
-    font-size: 16px;
-    color: var(--text-muted);
-    line-height: 1.6;
+/* ============================================== */
+/* GAYA CARA KERJA (STEP-BY-STEP)                 */
+/* ============================================== */
+.step-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
 }
-
-/* LAYOUT CONTAINER */
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px 60px;
-}
-
-/* TABS FILTER */
-.tabs-container {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
-}
-
-.tab-btn {
-    background-color: var(--bg-card);
-    border: 1px solid var(--border);
-    color: var(--text-muted);
-    padding: 10px 20px;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 14px;
-    cursor: pointer;
-    transition: 0.3s;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-}
-
-.tab-btn:hover { border-color: var(--primary); color: var(--primary); }
-.tab-btn.active {
-    background-color: var(--primary);
-    color: white;
-    border-color: var(--primary);
-}
-
-/* GALERI PRODUK GRID */
-.katalog-galeri {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 25px;
-}
-
-/* KARTU GALERI */
-.card {
-    background-color: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
-    border-color: #BFDBFE;
-}
-
-/* FOTO GALERI BESAR */
-.card-img-box {
-    width: 100%;
-    height: 180px; /* Ukuran foto galeri */
-    overflow: hidden;
-    border-bottom: 1px solid var(--border);
-    background-color: #F3F4F6;
-}
-
-.card-img-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: 0.5s ease;
-}
-
-.card:hover .card-img-box img {
-    transform: scale(1.08); /* Efek zoom tipis pas di-hover */
-}
-
-/* INFO KARTU */
-.card-body {
-    padding: 20px;
-}
-
-.kategori-label {
-    font-size: 11px;
-    font-weight: 700;
+.step-item { margin-bottom: 60px; }
+.step-number {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-light);
     color: var(--primary);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 auto 20px;
+}
+.step-item h2 { font-size: 22px; font-weight: 700; margin-bottom: 10px; }
+.step-item p { color: var(--text-muted); font-size: 14px; line-height: 1.6; margin-bottom: 30px; }
+.step-img {
+    width: 100%;
+    max-width: 500px; /* Ukuran gambar dibatasin biar gak raksasa */
+    border-radius: 20px;
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+    margin: 0 auto;
     display: block;
 }
 
-.card-body h3 {
-    font-size: 18px;
-    color: var(--text-dark);
-    margin-bottom: 8px;
-}
-
-.card-body p {
-    font-size: 14px;
-    color: var(--text-muted);
-    margin-bottom: 15px;
-    line-height: 1.5;
-}
-
-.card-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px dashed var(--border);
-    padding-top: 15px;
-}
-
-.harga {
-    font-size: 16px;
-    font-weight: 800;
-    color: var(--text-dark);
-}
-
-.btn-beli {
-    background-color: #EFF6FF;
-    color: var(--primary);
-    border: none;
-    padding: 8px 14px;
-    border-radius: 6px;
-    font-weight: 600;
-    font-size: 13px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.card:hover .btn-beli {
-    background-color: var(--primary);
-    color: white;
-}
-
-/* ANIMASI FILTER MUNCUL */
-.muncul { animation: fadeIn 0.4s ease-out forwards; }
-@keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.95); }
-    to { opacity: 1; transform: scale(1); }
-}
-
-footer {
+/* ============================================== */
+/* GAYA FITUR / KEUNGGULAN                        */
+/* ============================================== */
+.fitur-section {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 40px 20px;
     text-align: center;
-    padding: 30px;
-    color: var(--text-muted);
-    font-size: 13px;
-    border-top: 1px solid var(--border);
-    background-color: var(--bg-card);
 }
+.fitur-header h2 { font-size: 24px; font-weight: 700; margin-bottom: 10px; }
+.fitur-header p { color: var(--text-muted); font-size: 15px; margin-bottom: 50px; }
+
+.fitur-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.fitur-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.fitur-icon {
+    font-size: 40px; /* Bikin ikon gede */
+    margin-bottom: 15px;
+}
+.fitur-item h3 { font-size: 18px; font-weight: 700; margin-bottom: 10px; color: var(--text-dark); }
+.fitur-item p { font-size: 14px; color: var(--text-muted); line-height: 1.6; max-width: 400px; }
+
+
+/* ============================================== */
+/* GAYA KATALOG & LAINNYA                         */
+/* ============================================== */
+.container { max-width: 1100px; margin: 0 auto; padding: 40px 20px 80px; }
+.section-title { text-align: center; margin-bottom: 30px; }
+.section-title h2 { font-size: 24px; font-weight: 700; }
+
+.tabs-container { display: flex; gap: 10px; justify-content: center; margin-bottom: 30px; flex-wrap: wrap; }
+.tab-btn {
+    background-color: var(--bg-body); border: 1px solid var(--border); color: var(--text-muted);
+    padding: 8px 20px; border-radius: 50px; font-weight: 600; font-size: 14px; cursor: pointer; transition: 0.3s;
+}
+.tab-btn:hover { border-color: var(--primary); color: var(--primary); }
+.tab-btn.active { background-color: var(--primary); color: white; border-color: var(--primary); }
+
+.katalog-galeri { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; }
+.card { border: 1px solid var(--border); border-radius: 16px; overflow: hidden; transition: 0.3s; cursor: pointer; }
+.card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); border-color: var(--primary); }
+.card-img-box { width: 100%; height: 180px; background-color: #F3F4F6; }
+.card-img-box img { width: 100%; height: 100%; object-fit: cover; }
+.card-body { padding: 20px; }
+.kategori-label { font-size: 11px; font-weight: 700; color: var(--primary); text-transform: uppercase; margin-bottom: 8px; display: block; }
+.card-body h3 { font-size: 18px; margin-bottom: 8px; }
+.card-body p { font-size: 14px; color: var(--text-muted); margin-bottom: 15px; line-height: 1.5; }
+.card-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px dashed var(--border); padding-top: 15px; }
+.harga { font-size: 16px; font-weight: 800; }
+.btn-beli { background-color: var(--primary-light); color: var(--primary); border: none; padding: 8px 14px; border-radius: 6px; font-weight: 600; font-size: 13px; cursor: pointer; }
+
+footer { text-align: center; padding: 30px; color: var(--text-muted); font-size: 13px; border-top: 1px solid var(--border); }
