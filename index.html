@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moyhaz Network | Layanan Premium</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,85 +12,38 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="brand">
-                <div class="logo-box">M</div>
-                Moyhaz<span>Network</span>
-            </div>
-            <div class="menu-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                <div class="logo-box" id="logo-nav"></div> Moyhaz<span>Network</span>
             </div>
         </div>
     </nav>
 
     <header class="hero">
-        <span class="badge">✨ Solusi Digital Terbaik 2026</span>
         <h1>Katalog Layanan <span class="text-blue">Premium</span></h1>
-        <p>Temukan script bot, panel game, dan layanan cloud server dengan kualitas terbaik dan harga terjangkau.</p>
+        <p>Pilih layanan script bot, panel game, dan cloud server terbaik kami.</p>
     </header>
+
+    <main class="container">
+        <div class="katalog-galeri" id="katalog-produk"></div>
+    </main>
 
     <section class="step-section">
         <div class="step-item">
             <div class="step-number">1</div>
             <h2>Pilih Layanan</h2>
-            <p>Tersedia lebih dari 1.700 jenis layanan digital yang didukung oleh kami.</p>
-            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=600" alt="Step 1" class="step-img">
-        </div>
-
-        <div class="step-item">
-            <div class="step-number">2</div>
-            <h2>Pilih Server / Negara</h2>
-            <p>Pilih dari lebih dari 100 opsi server global yang tersedia di platform kami.</p>
-            <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=600" alt="Step 2" class="step-img">
+            <p>Tersedia ribuan layanan digital yang siap digunakan.</p>
+            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=600" id="img-step1" alt="Step 1" class="step-img">
         </div>
     </section>
 
-    <section class="fitur-section">
-        <div class="fitur-header">
-            <h2>Kenapa Memilih Kami?</h2>
-            <p>Tersedia banyak jenis layanan dengan harga murah namun kualitas tetap yang terbaik.</p>
-        </div>
-
-        <div class="fitur-grid">
-            <div class="fitur-item">
-                <div class="fitur-icon">🚀</div>
-                <h3>Pembaruan Berkala</h3>
-                <p>Layanan System dan API kami terus diperbarui dengan peningkatan fitur dan perbaikan sistem secara berkala.</p>
-            </div>
-            <div class="fitur-item">
-                <div class="fitur-icon">✈️</div>
-                <h3>Fast Receive</h3>
-                <p>Layanan kami menjamin pengiriman file dan akses instan tanpa delay atau gangguan jaringan.</p>
-            </div>
-            <div class="fitur-item">
-                <div class="fitur-icon">🛡️</div>
-                <h3>Terpercaya</h3>
-                <p>Moyhaz Network berkomitmen untuk menjaga kepercayaan pengguna dengan terus meningkatkan kualitas layanan.</p>
-            </div>
-            <div class="fitur-item">
-                <div class="fitur-icon">👨‍💻</div>
-                <h3>Dukungan Prima</h3>
-                <p>Tim support kami siap membantu 24/7 untuk memastikan kelancaran layanan dan kepuasan pengguna.</p>
+    <section class="contact-bottom-section">
+        <div class="contact-card-single">
+            <img src="https://images.unsplash.com/photo-1557683311-eac922347aa1?q=80&w=800" id="img-contact" alt="Contact" class="contact-img-lebar">
+            <div class="contact-blue-box">
+                <p>Telegram : <a href="https://t.me/MoyhazXcodr" target="_blank">click here</a></p>
+                <p>Whatsapp : <a href="https://wa.me/628123456789" target="_blank">click here</a></p>
             </div>
         </div>
     </section>
-
-    <main class="container">
-        <div class="section-title">
-            <h2>Katalog Produk</h2>
-        </div>
-        
-        <div class="tabs-container">
-            <button class="tab-btn active" onclick="filterKategori('Semua', this)">Semua Layanan</button>
-            <button class="tab-btn" onclick="filterKategori('Script', this)">📦 Script & Bot</button>
-            <button class="tab-btn" onclick="filterKategori('Server', this)">☁️ Server</button>
-            <button class="tab-btn" onclick="filterKategori('Desain', this)">🎨 Desain</button>
-        </div>
-
-        <div class="katalog-galeri" id="katalog-produk"></div>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Moyhaz Network. All rights reserved.</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>
