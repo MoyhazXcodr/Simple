@@ -2,47 +2,32 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Moyhaz Network | Digital Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moyhaz Network | Digital Premium</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="navbar">
-        <div class="brand"><img src="URL_LOGO" class="logo"> MoyhazNetwork</div>
+        <div class="brand-side">
+            <img src="" id="nav-logo-img" class="nav-logo">
+            <span id="brand-name">MoyhazNetwork</span>
+        </div>
     </nav>
 
-    <header class="hero"><h1>Katalog Layanan Premium</h1></header>
+    <header class="hero">
+        <h1 id="hero-title">Katalog Layanan Premium</h1>
+    </header>
 
-    <div class="grid-container" id="katalog-produk">
-        <div class="card" onclick="this.classList.toggle('active')">
-            <img src="URL_FOTO_1"><h3>Produk 1</h3><div class="detail"><p>Detail produk 1...</p></div>
-        </div>
-        <div class="card" onclick="this.classList.toggle('active')">
-            <img src="URL_FOTO_2"><h3>Produk 2</h3><div class="detail"><p>Detail produk 2...</p></div>
-        </div>
-        </div>
+    <div id="katalog-produk" class="grid-container"></div>
 
-    <section class="step-container">
-        <div class="step-item"><h3>Keterangan 1</h3><img src="URL_FOTO_1"></div>
-        <div class="step-item"><h3>Keterangan 2</h3><img src="URL_FOTO_2"></div>
-        <div class="step-item"><h3>Keterangan 3</h3><img src="URL_FOTO_3"></div>
-        <div class="step-item"><h3>Keterangan 4</h3><img src="URL_FOTO_4"></div>
-        <div class="step-item"><h3>Keterangan 5</h3><img src="URL_FOTO_5"></div>
-    </section>
+    <div id="keterangan-layanan" class="step-container"></div>
 
-    <div class="grid-container">
-        <div class="card"><img><h3>Foto 1</h3></div>
-        <div class="card"><img><h3>Foto 2</h3></div>
-        <div class="card"><img><h3>Foto 3</h3></div>
-        <div class="card"><img><h3>Foto 4</h3></div>
-        <div class="card"><img><h3>Foto 5</h3></div>
-    </div>
+    <div id="katalog-foto-text" class="grid-container"></div>
 
-    <div class="contact-box">
-        <img src="URL_FOTO_LEBAR" class="contact-img">
-        <p>Telegram: <a href="#">Click Here</a></p>
-        <p>WhatsApp: <a href="#">Click Here</a></p>
-    </div>
+    <div id="kontak-bawah" class="contact-section"></div>
 
     <footer class="footer">@ Hazsly Store - Digital</footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
