@@ -1,14 +1,12 @@
-/* ========================
-   PENGATURAN WARNA UTAMA
-   (Lu bisa ganti warnanya di sini)
-   ======================== */
+/* ROOT - Warna Tema Terang (Light Mode) */
 :root {
-    --bg-main: #07080A;      /* Background Paling Gelap */
-    --bg-card: #13151A;      /* Background Kartu Layanan */
-    --border: #22252E;       /* Warna Garis */
-    --primary: #00D2FF;      /* Warna Biru/Cyan Nyala */
-    --text-white: #FFFFFF;
-    --text-muted: #8A8F98;
+    --bg-body: #F9FAFB;      /* Background abu-abu sangat muda */
+    --bg-card: #FFFFFF;      /* Background kartu putih bersih */
+    --text-dark: #111827;    /* Teks hitam pekat */
+    --text-muted: #6B7280;   /* Teks abu-abu */
+    --border: #E5E7EB;       /* Garis pembatas halus */
+    --primary: #2563EB;      /* Biru profesional (ala RumahOTP) */
+    --primary-hover: #1D4ED8;
 }
 
 * {
@@ -19,24 +17,22 @@
 }
 
 body {
-    background-color: var(--bg-main);
-    color: var(--text-white);
-    padding-bottom: 50px;
+    background-color: var(--bg-body);
+    color: var(--text-dark);
 }
 
 /* NAVBAR */
 .navbar {
-    background: rgba(7, 8, 10, 0.8);
-    backdrop-filter: blur(12px);
+    background-color: var(--bg-card);
     border-bottom: 1px solid var(--border);
-    position: fixed;
+    position: sticky;
     top: 0;
-    width: 100%;
     z-index: 100;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 }
 
 .nav-container {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 15px 20px;
     display: flex;
@@ -45,163 +41,226 @@ body {
 }
 
 .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-size: 20px;
-    font-weight: 900;
-    letter-spacing: 1px;
+    font-weight: 800;
+    color: var(--text-dark);
 }
 
-.brand span { color: var(--primary); }
+.brand span { font-weight: 500; color: var(--text-muted); }
 
-.btn-contact {
-    background: rgba(0, 210, 255, 0.1);
-    color: var(--primary);
-    border: 1px solid var(--primary);
-    padding: 8px 16px;
+.logo-box {
+    background-color: var(--primary);
+    color: white;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 8px;
+    font-size: 18px;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
     text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
     font-weight: 600;
     font-size: 14px;
     transition: 0.3s;
 }
 
-.btn-contact:hover {
-    background: var(--primary);
-    color: var(--bg-main);
-}
+.btn-primary:hover { background-color: var(--primary-hover); }
 
 /* HERO SECTION */
 .hero {
-    max-width: 800px;
-    margin: 120px auto 50px;
     text-align: center;
-    padding: 0 20px;
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .badge {
-    display: inline-block;
-    background: #1A1D24;
-    border: 1px solid var(--border);
-    padding: 6px 14px;
+    background-color: #DBEAFE;
+    color: var(--primary);
+    padding: 6px 16px;
     border-radius: 50px;
-    font-size: 12px;
-    color: var(--text-muted);
+    font-size: 13px;
+    font-weight: 600;
+    display: inline-block;
     margin-bottom: 20px;
 }
 
 .hero h1 {
-    font-size: 38px;
-    font-weight: 900;
-    line-height: 1.2;
+    font-size: 42px;
+    font-weight: 800;
     margin-bottom: 15px;
+    color: var(--text-dark);
 }
 
-.highlight { color: var(--primary); }
+.text-blue { color: var(--primary); }
 
 .hero p {
-    color: var(--text-muted);
     font-size: 16px;
+    color: var(--text-muted);
     line-height: 1.6;
-    margin-bottom: 30px;
 }
 
-.stats-container {
+/* LAYOUT CONTAINER */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+}
+
+/* TABS FILTER */
+.tabs-container {
     display: flex;
+    gap: 10px;
     justify-content: center;
-    gap: 15px;
+    margin-bottom: 30px;
     flex-wrap: wrap;
 }
 
-.stat-item {
-    background: var(--bg-card);
+.tab-btn {
+    background-color: var(--bg-card);
     border: 1px solid var(--border);
+    color: var(--text-muted);
     padding: 10px 20px;
-    border-radius: 12px;
-    font-size: 14px;
+    border-radius: 50px;
     font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 }
 
-/* KONTEN GRID (ALA RUMAHOTP) */
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
+.tab-btn:hover { border-color: var(--primary); color: var(--primary); }
+.tab-btn.active {
+    background-color: var(--primary);
+    color: white;
+    border-color: var(--primary);
 }
 
-.section-title h2 {
-    font-size: 22px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 15px;
-}
-
-.grid-layanan {
+/* GALERI PRODUK GRID */
+.katalog-galeri {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
 }
 
-/* KARTU ITEM */
+/* KARTU GALERI */
 .card {
-    background: var(--bg-card);
+    background-color: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: 16px;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    transition: 0.3s;
-    text-decoration: none;
-    color: inherit;
+    overflow: hidden;
+    transition: all 0.3s ease;
     cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
 }
 
 .card:hover {
-    border-color: var(--primary);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 210, 255, 0.05);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+    border-color: #BFDBFE;
 }
 
-/* BINGKAI FOTO CUSTOM LUU */
-.ikon-produk {
-    width: 60px;
-    height: 60px;
-    border-radius: 12px;
-    background: #1A1D24;
-    border: 1px solid var(--border);
+/* FOTO GALERI BESAR */
+.card-img-box {
+    width: 100%;
+    height: 180px; /* Ukuran foto galeri */
     overflow: hidden;
-    flex-shrink: 0;
+    border-bottom: 1px solid var(--border);
+    background-color: #F3F4F6;
 }
 
-.ikon-produk img {
+.card-img-box img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.5s ease;
 }
 
-.info-produk {
-    flex: 1;
+.card:hover .card-img-box img {
+    transform: scale(1.08); /* Efek zoom tipis pas di-hover */
 }
 
-.info-produk h3 {
-    font-size: 16px;
-    margin-bottom: 5px;
+/* INFO KARTU */
+.card-body {
+    padding: 20px;
 }
 
-.info-produk p {
-    color: var(--text-muted);
-    font-size: 13px;
+.kategori-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.card-body h3 {
+    font-size: 18px;
+    color: var(--text-dark);
     margin-bottom: 8px;
 }
 
+.card-body p {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px dashed var(--border);
+    padding-top: 15px;
+}
+
 .harga {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--text-dark);
+}
+
+.btn-beli {
+    background-color: #EFF6FF;
     color: var(--primary);
-    font-weight: 700;
-    font-size: 15px;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card:hover .btn-beli {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* ANIMASI FILTER MUNCUL */
+.muncul { animation: fadeIn 0.4s ease-out forwards; }
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
 }
 
 footer {
     text-align: center;
-    margin-top: 80px;
+    padding: 30px;
     color: var(--text-muted);
-    font-size: 12px;
+    font-size: 13px;
+    border-top: 1px solid var(--border);
+    background-color: var(--bg-card);
 }
