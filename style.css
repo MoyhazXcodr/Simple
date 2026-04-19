@@ -1,15 +1,18 @@
-body { background: #fff; color: #1f2937; font-family: sans-serif; margin: 0; }
-.navbar { padding: 20px; border-bottom: 1px solid #e5e7eb; font-weight: 800; display: flex; align-items: center; }
-.logo { width: 30px; margin-right: 10px; }
+:root { --bg: #FFFFFF; --primary: #2563EB; --text: #1F2937; }
+body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; margin: 0; padding-bottom: 50px; }
+.navbar { padding: 20px; display: flex; align-items: center; border-bottom: 1px solid #E5E7EB; }
+.nav-logo { width: 35px; height: 35px; margin-right: 12px; }
+.brand-side { font-weight: 800; font-size: 20px; display: flex; align-items: center; }
+.hero { text-align: center; padding: 40px 20px; }
 .grid-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; padding: 20px; }
-.card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 10px; transition: 0.3s; }
-.card.active { grid-column: span 2; border: 2px solid #2563EB; }
-.card img { width: 100%; height: 120px; object-fit: cover; border-radius: 8px; }
-.detail { display: none; }
-.card.active .detail { display: block; padding-top: 10px; }
-.step-container { padding: 20px; text-align: center; }
-.step-item { margin-bottom: 30px; }
-.step-item img { width: 100%; border-radius: 12px; }
-.contact-box { background: #dbeafe; padding: 20px; text-align: center; border-radius: 16px; margin: 20px; }
-.contact-img { width: 100%; border-radius: 8px; }
-.footer { text-align: center; padding: 40px; font-weight: bold; color: #666; }
+.card { border: 1px solid #E5E7EB; border-radius: 16px; cursor: pointer; padding: 12px; transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); background: white; }
+.card.active { grid-column: span 2; border: 2px solid var(--primary); transform: scale(1.02); }
+.card-img { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 10px; }
+.detail { display: none; padding-top: 15px; border-top: 1px solid #E5E7EB; margin-top: 15px; animation: fadeIn 0.5s ease; }
+.card.active .detail { display: block; }
+.step-item { margin-bottom: 40px; text-align: center; padding: 20px; }
+.step-img { width: 100%; border-radius: 16px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+.contact-section { padding: 20px; max-width: 500px; margin: 20px auto; }
+.contact-box { background: #DBEAFE; padding: 30px; text-align: center; border-radius: 20px; }
+.footer { text-align: center; padding: 40px; font-weight: 800; color: #666; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
