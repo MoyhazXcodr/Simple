@@ -1,82 +1,44 @@
 // ==========================================
-// DATA GALERI PRODUK
+// PUSAT KENDALI URL FOTO & DATA
 // ==========================================
-// Note: Ganti link "foto" pake URL gambar custom lu
-const dataProduk = [
+
+// 1. URL LOGO NAV & FOTO STEP
+document.getElementById('logo-nav').style.backgroundImage = "url('https://cdn-icons-png.flaticon.com/512/3135/3135715.png')";
+document.getElementById('logo-nav').style.backgroundSize = "cover";
+
+document.getElementById('img-step1').src = "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=600";
+document.getElementById('img-contact').src = "https://images.unsplash.com/photo-1557683311-eac922347aa1?q=80&w=800";
+
+// 2. DATA PRODUK (GANTI FOTO DI SINI)
+const produk = [
     {
-        kategori: "Script",
-        nama: "Script Hazdbail V1",
-        deskripsi: "Bot WhatsApp otomatis berbasis Baileys, fitur anti-ban & super ringan.",
+        nama: "Script Hazdbail",
+        desc: "Bot WhatsApp Anti-Ban.",
         harga: "Rp 150.000",
         foto: "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?q=80&w=600"
     },
     {
-        kategori: "Server",
-        nama: "Premium Pterodactyl",
-        deskripsi: "Panel hosting game premium tanpa lag untuk komunitas lu.",
-        harga: "Rp 50.000 / bln",
+        nama: "Panel Ptero",
+        desc: "Hosting game stabil.",
+        harga: "Rp 50.000",
         foto: "https://images.unsplash.com/photo-1558494949-ef010958384e?q=80&w=600"
-    },
-    {
-        kategori: "Server",
-        nama: "VPS Ubuntu DCloud",
-        deskripsi: "Cloud server lokal anti DDoS, setup mudah dan cepat.",
-        harga: "Rp 75.000 / bln",
-        foto: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=600"
-    },
-    {
-        kategori: "Desain",
-        nama: "Jasa Web UI Custom",
-        deskripsi: "Bikin website jualan lu jadi terang dan profesional kayak gini.",
-        harga: "Mulai Rp 200.000",
-        foto: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=600"
     }
 ];
 
-const wadahGaleri = document.getElementById('katalog-produk');
-
-// Fungsi nge-render foto ke web
-function renderGaleri(filterKategori = 'Semua') {
-    wadahGaleri.innerHTML = ''; // Kosongin dulu
-
-    // Saring data berdasarkan tab yang dipencet
-    const produkDisaring = filterKategori === 'Semua' 
-        ? dataProduk 
-        : dataProduk.filter(item => item.kategori === filterKategori);
-
-    produkDisaring.forEach(item => {
-        const kartu = document.createElement('div');
-        kartu.className = 'card muncul'; // Tambah efek animasi muncul
-        
-        // HTML Kartu Galeri
-        kartu.innerHTML = `
-            <div class="card-img-box">
-                <img src="${item.foto}" alt="${item.nama}">
-            </div>
+// Mesin Render
+const wadah = document.getElementById('katalog-produk');
+produk.forEach(p => {
+    wadah.innerHTML += `
+        <div class="card">
+            <div class="card-img-box"><img src="${p.foto}" alt="${p.nama}"></div>
             <div class="card-body">
-                <span class="kategori-label">${item.kategori}</span>
-                <h3>${item.nama}</h3>
-                <p>${item.deskripsi}</p>
+                <h3>${p.nama}</h3>
+                <p>${p.desc}</p>
                 <div class="card-footer">
-                    <div class="harga">${item.harga}</div>
+                    <span class="harga">${p.harga}</span>
                     <button class="btn-beli">Detail</button>
                 </div>
             </div>
-        `;
-        wadahGaleri.appendChild(kartu);
-    });
-}
-
-// Fungsi buat tombol Tab Filter
-function filterKategori(kategori, elemenTombol) {
-    // 1. Ubah warna tombol tab
-    const semuaTombol = document.querySelectorAll('.tab-btn');
-    semuaTombol.forEach(btn => btn.classList.remove('active'));
-    elemenTombol.classList.add('active');
-
-    // 2. Tampilkan galeri yang sesuai
-    renderGaleri(kategori);
-}
-
-// Jalankan pertama kali saat web dibuka (Munculin 'Semua')
-renderGaleri('Semua');
+        </div>
+    `;
+});
