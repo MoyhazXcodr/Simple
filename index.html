@@ -15,7 +15,9 @@
                 <div class="logo-box">M</div>
                 Moyhaz<span>Network</span>
             </div>
-            <a href="https://wa.me/628123456789" class="btn-primary">Hubungi Admin</a>
+            <div class="menu-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </div>
         </div>
     </nav>
 
@@ -25,18 +27,65 @@
         <p>Temukan script bot, panel game, dan layanan cloud server dengan kualitas terbaik dan harga terjangkau.</p>
     </header>
 
+    <section class="step-section">
+        <div class="step-item">
+            <div class="step-number">1</div>
+            <h2>Pilih Layanan</h2>
+            <p>Tersedia lebih dari 1.700 jenis layanan digital yang didukung oleh kami.</p>
+            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=600" alt="Step 1" class="step-img">
+        </div>
+
+        <div class="step-item">
+            <div class="step-number">2</div>
+            <h2>Pilih Server / Negara</h2>
+            <p>Pilih dari lebih dari 100 opsi server global yang tersedia di platform kami.</p>
+            <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=600" alt="Step 2" class="step-img">
+        </div>
+    </section>
+
+    <section class="fitur-section">
+        <div class="fitur-header">
+            <h2>Kenapa Memilih Kami?</h2>
+            <p>Tersedia banyak jenis layanan dengan harga murah namun kualitas tetap yang terbaik.</p>
+        </div>
+
+        <div class="fitur-grid">
+            <div class="fitur-item">
+                <div class="fitur-icon">🚀</div>
+                <h3>Pembaruan Berkala</h3>
+                <p>Layanan System dan API kami terus diperbarui dengan peningkatan fitur dan perbaikan sistem secara berkala.</p>
+            </div>
+            <div class="fitur-item">
+                <div class="fitur-icon">✈️</div>
+                <h3>Fast Receive</h3>
+                <p>Layanan kami menjamin pengiriman file dan akses instan tanpa delay atau gangguan jaringan.</p>
+            </div>
+            <div class="fitur-item">
+                <div class="fitur-icon">🛡️</div>
+                <h3>Terpercaya</h3>
+                <p>Moyhaz Network berkomitmen untuk menjaga kepercayaan pengguna dengan terus meningkatkan kualitas layanan.</p>
+            </div>
+            <div class="fitur-item">
+                <div class="fitur-icon">👨‍💻</div>
+                <h3>Dukungan Prima</h3>
+                <p>Tim support kami siap membantu 24/7 untuk memastikan kelancaran layanan dan kepuasan pengguna.</p>
+            </div>
+        </div>
+    </section>
+
     <main class="container">
+        <div class="section-title">
+            <h2>Katalog Produk</h2>
+        </div>
         
         <div class="tabs-container">
             <button class="tab-btn active" onclick="filterKategori('Semua', this)">Semua Layanan</button>
             <button class="tab-btn" onclick="filterKategori('Script', this)">📦 Script & Bot</button>
-            <button class="tab-btn" onclick="filterKategori('Server', this)">☁️ Cloud & Server</button>
-            <button class="tab-btn" onclick="filterKategori('Desain', this)">🎨 UI/UX Desain</button>
+            <button class="tab-btn" onclick="filterKategori('Server', this)">☁️ Server</button>
+            <button class="tab-btn" onclick="filterKategori('Desain', this)">🎨 Desain</button>
         </div>
 
-        <div class="katalog-galeri" id="katalog-produk">
-            </div>
-
+        <div class="katalog-galeri" id="katalog-produk"></div>
     </main>
 
     <footer>
