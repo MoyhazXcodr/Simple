@@ -3,29 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moyhaz Network | Premium Store</title>
+    <title>Moyhaz Network | Premium Digital Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <nav class="navbar">
         <div class="nav-container">
-            <button class="tab-btn active" onclick="switchTab('home')">🏠 Home</button>
-            <button class="tab-btn" onclick="switchTab('product')">💼 Product</button>
-            <button class="tab-btn" onclick="switchTab('info')">ℹ️ Info</button>
+            <div class="brand">MOYHAZ<span>NETWORK</span></div>
+            <a href="https://wa.me/628123456789" class="btn-contact">Hubungi Admin</a>
         </div>
     </nav>
 
-    <main class="container">
-        <header class="text-center">
-            <h1 class="gradient-text">Moyhaz Network</h1>
-            <p class="tagline">MODERN CLASS DIGITAL SOLUTIONS</p>
-        </header>
+    <header class="hero">
+        <div class="badge">🚀 Layanan Digital Terpercaya</div>
+        <h1>Pusat Layanan Premium <br><span class="highlight">Otomatis & Cepat</span></h1>
+        <p>Pilih layanan script, panel, atau cloud yang Anda butuhkan. Transaksi aman, proses secepat kilat.</p>
+        
+        <div class="stats-container">
+            <div class="stat-item">✅ 100% Aman</div>
+            <div class="stat-item">⚡ Auto Proses</div>
+            <div class="stat-item">🎧 24/7 Support</div>
+        </div>
+    </header>
 
-        <div id="app-content" class="animasi-masuk"></div>
+    <main class="container">
+        <div class="section-title">
+            <h2>🔥 Daftar Layanan Kami</h2>
+        </div>
+
+        <div class="grid-layanan" id="katalog-produk"></div>
     </main>
 
     <footer>
-        <p>&copy; 2026 Moyhaz Network &bull; Built with Speed</p>
+        <p>&copy; 2026 Moyhaz Network. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
