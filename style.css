@@ -5,13 +5,14 @@ body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-ser
 .brand-side { font-weight: 800; font-size: 20px; display: flex; align-items: center; }
 .hero { text-align: center; padding: 40px 20px; }
 .grid-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; padding: 20px; }
-.card { border: 1px solid #E5E7EB; border-radius: 16px; cursor: pointer; padding: 12px; transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); background: white; }
+.card { border: 1px solid #E5E7EB; border-radius: 16px; cursor: pointer; padding: 12px; transition: all 0.5s ease-in-out; background: white; overflow: hidden; }
 .card.active { grid-column: span 2; border: 2px solid var(--primary); transform: scale(1.02); }
 .card-img { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 10px; }
-.detail { display: none; padding-top: 15px; border-top: 1px solid #E5E7EB; margin-top: 15px; animation: fadeIn 0.5s ease; }
-.card.active .detail { display: block; }
+.detail { display: none; padding-top: 15px; border-top: 1px solid #E5E7EB; margin-top: 15px; }
+.card.active .detail { display: block; animation: fadeIn 0.5s ease; }
+.step-container { padding: 20px; }
 .step-item { margin-bottom: 40px; text-align: center; padding: 20px; }
-.step-img { width: 100%; border-radius: 16px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+.step-img { width: 100%; border-radius: 16px; }
 .contact-section { padding: 20px; max-width: 500px; margin: 20px auto; }
 .contact-box { background: #DBEAFE; padding: 30px; text-align: center; border-radius: 20px; }
 .footer { text-align: center; padding: 40px; font-weight: 800; color: #666; }
