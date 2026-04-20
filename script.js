@@ -57,7 +57,7 @@ galData.forEach(item => {
 // 4. KONTAK BAWAH (Foto Khusus)
 document.getElementById('kontak-bawah').innerHTML = `
     <div class="contact-box">
-        <img src="LINK_FOTO_KONTAK_LEBAR" style="width:100%; border-radius:12px;">
-        <p>Telegram : <a href="https://t.me/MoyhazXcodr">click here</a></p>
-        <p>WhatsApp : <a href="https://wa.me/628123456789">click here</a></p>
+        <img src="https://upld.zone.id/uploads/cmi72diq/file-00000000a66c720884514bc1530bef24.webp" style="width:100%; border-radius:12px;">
+        <p>Telegram : <a href="https://t.me/Moyhazgntk">click here</a></p>
+        <p>WhatsApp : <a href="https://wa.me/+6283847546366">click here</a></p>
     </div>`;
