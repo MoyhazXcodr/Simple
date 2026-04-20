@@ -1,6 +1,6 @@
 // 1. DATA 10 PRODUK (Ganti link masing-masing)
 const produk = [
-    { nama: "Produk 1", desc: "Detail 1", img: "LINK_FOTO_PRODUK_1" },
+    { nama: "SCRIPT SERINA AI", desc: "Dirancang Untuk Beberapa Keperluan Pribadi", img: "https://upld.zone.id/uploads/cmi72diq/logo_p1.webp" },
     { nama: "Produk 2", desc: "Detail 2", img: "LINK_FOTO_PRODUK_2" },
     { nama: "Produk 3", desc: "Detail 3", img: "LINK_FOTO_PRODUK_3" },
     { nama: "Produk 4", desc: "Detail 4", img: "LINK_FOTO_PRODUK_4" },
